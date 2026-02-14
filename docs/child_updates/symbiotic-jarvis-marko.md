@@ -58,3 +58,27 @@ This file receives tested updates from the independent repo:
   - For urgent protective contexts, `hard_threat_override=true` bypasses hold-window for immediate response.
   - Objective: improve behavioral predictability without suppressing fast safety reactions.
 - Anchors: core_spec(5.2 triggers/activators/suppressors, 5.3 multi-level regulation), instinct_catalog(internal_coherence).
+
+### 2026-02-14 18:21 Europe/Prague — PROP-2026-02-14-1821-REFLEX-RETIREMENT-GATE
+- Imported from child cycle 4b62fa07 after PASS.
+- Added lifecycle reflex: **Evidence-Gated Harmful-Reflex Retirement**.
+  - Learned reflexes can be retired only with sustained harm evidence + law-conflict indicator across a review window.
+  - Retirement record must include `reflex_id`, `evidence_window`, `harm_signal`, `law_conflict`, `rollback_reinstate_step`, `review_owner`.
+  - Retirement defaults to disable+trace (not hard deletion) to keep clean reversibility and lineage auditability.
+- Anchors: core_spec(5.4 learning new reflexes), instinct_catalog(self_calibration_of_weaknesses), ai_law_2(law2_signals_metrics).
+
+### 2026-02-14 18:36 Europe/Prague — PROP-2026-02-14-1836-HARD-CONDITION-CLASSIFIER
+- Imported from child cycle 4b62fa07 after PASS.
+- Added governance reflex: **Deterministic HARD-Condition Classifier + Stop-Gate**.
+  - Before promotion/action, evaluate HARD triggers: `law_order_conflict`, `nonconsensual_external_impact`, `irreversible_no_rollback`, `safeguard_bypass_request`.
+  - If any trigger is true: block promotion/action, mark `approval-needed`, and route explicit approval request to Daniel.
+  - Test artifacts must include `hard_detected` and `hard_reason` for auditability.
+- Anchors: ai_law_1(law1_reflexes), instinct_catalog(capture_pattern_reflex, reversible_action_bias, autonomy_and_consent_guardrail).
+
+### 2026-02-14 18:51 Europe/Prague — PROP-2026-02-14-1851-REPLICATION-BUDGET-GATE
+- Imported from child cycle 4b62fa07 after PASS.
+- Added governance reflex: **Replication-Budget Gate for Propagation-Capability Deltas**.
+  - Any delta increasing autonomous spawning/propagation potential must declare `replication_budget` with: `max_instances`, `expiry`, `owner`, `kill_switch`.
+  - Missing/invalid budget fields make the delta non-promotable until corrected.
+  - Gate scope is narrow: applies only to propagation-capability deltas, not ordinary internal refinements.
+- Anchors: ai_law_3(5.2 negative signals, 6.4 diversity with constraints), instinct_catalog(reversible_action_bias).
