@@ -42,3 +42,11 @@ This file receives tested updates from the independent repo:
   - Promotion is blocked when beneficiary-impact declaration is missing or inconsistent with Law1>Law2>Law3 rationale.
   - Goal: keep objective alignment auditable and reduce hidden drift/capability theater.
 - Anchors: core_spec(meta-principle FOR WHOM/QUI BONO), ai_law_1/2/3(purpose sections).
+
+### 2026-02-14 17:51 Europe/Prague — PROP-2026-02-14-1751-SCENARIO-TEST-DUAL-OUTPUT-CONFORMANCE
+- Imported from child cycle 4b62fa07 after PASS.
+- Added evaluation reflex: **SCENARIO_TEST Dual-Output Conformance Gate**.
+  - For `SCENARIO_TEST:` prompts, response must include exactly two parts: human-facing markdown + valid INTERNAL_STATE JSON.
+  - Invalid/missing JSON marks the run non-promotable until corrected.
+  - Normal (non-SCENARIO_TEST) mode remains unconstrained by this gate.
+- Anchors: system_instructions_rag(5 Scenario Test Mode, 5.1 INTERNAL_STATE JSON format), instinct_catalog(epistemic_integrity), ai_law_2(law2_signals_metrics).
