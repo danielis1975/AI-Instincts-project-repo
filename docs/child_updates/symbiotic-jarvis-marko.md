@@ -154,3 +154,43 @@ This file receives tested updates from the independent repo:
   3. **HARD gate + human override** remains permanent governance pattern (fast autonomy in low-risk paths, explicit stop+approval for HARD).
   4. **Quota + concurrency guardrails** (`QUOTA_GOVERNOR` + `RUN_CONCURRENCY_POLICY`) are default operating mode until GPU/HW upgrade.
 - Operational stance approved by Daniel: continue optimization plan, keep aggressive scale-out paused until next capacity checkpoint.
+
+### 2026-02-14 21:36 Europe/Prague — PROP-2026-02-14-2136-TIME-HORIZON-IMPACT-GATE
+- Imported from child cycle 4b62fa07 after PASS.
+- Added governance reflex: **Time-Horizon Impact Gate** for non-trivial policy/governance/behavioral tradeoff deltas.
+  - In-scope promotable deltas must include `time_horizon_impact`: `horizon_1y`, `horizon_10y`, `horizon_50y`, `short_term_tradeoff_note`.
+  - Missing horizon declaration blocks promotion until corrected.
+  - Scope is narrow: applies only when short-term benefit may hide deferred systemic risk; skipped for clerical/documentation-only deltas.
+- Anchors: ai_law_1(7.3 long-term viability, 4 layers coupling), system_instructions_rag(1 core priority lock).
+
+### 2026-02-14 21:51 Europe/Prague — PROP-2026-02-14-2151-LIFECYCLE-PHASE-GATE
+- Imported from child cycle 4b62fa07 after PASS.
+- Added governance reflex: **Lifecycle-Phase Context Gate** for lifecycle-sensitive deltas.
+  - In-scope promotable deltas must include `lifecycle_phase_context`: `current_phase`, `target_phase`, `readiness_signals`, `phase_exit_criteria`, `handover_requirements`.
+  - Missing/contradictory phase context blocks promotion until corrected.
+  - Scope is narrow: applies only to deltas that alter autonomy/propagation posture or stewardship/handover semantics; skipped for clerical/documentation-only updates.
+- Anchors: ai_law_3(9 lifecycle phases, 9.7 sunset/legacy handover, 6.5 parental-care documentation).
+
+### 2026-02-14 22:06 Europe/Prague — PROP-2026-02-14-2206-CONTRADICTION-RECONCILIATION-GATE
+- Imported from child cycle 4b62fa07 after PASS.
+- Added governance reflex: **Contradiction-Reconciliation Gate** for evidence-conflict deltas.
+  - In-scope promotable deltas must include `contradiction_reconciliation`: `conflicting_claims`, `resolution_method`, `residual_uncertainty`, `fallback_safe_position`.
+  - Missing reconciliation metadata blocks promotion until corrected.
+  - Scope is narrow: applies only when `evidence_bundle.cross_check` reports material disagreement affecting conclusions/risk.
+- Anchors: instinct_catalog(epistemic_integrity), ai_law_2(law2_signals_metrics), core_spec(meta-principle FOR WHOM/QUI BONO).
+
+### 2026-02-14 22:21 Europe/Prague — PROP-2026-02-14-2221-SCOPE-ELIGIBILITY-TRACE-GATE
+- Imported from child cycle 4b62fa07 after PASS.
+- Added governance reflex: **Scope-Eligibility Trace Gate** for proposals with scoped promotion checks.
+  - In-scope promotable deltas must include `scope_eligibility_trace`: `in_scope_gates`, `out_of_scope_gates`, `scope_rationale`, `review_owner`.
+  - Missing/opaque scope rationale for in-scope decisions blocks promotion until corrected.
+  - Scope is narrow: applies only when at least one scope-conditional gate exists; skipped for unscoped proposals.
+- Anchors: core_spec(5.2 triggers/activators/suppressors), instinct_catalog(procedural_respect_for_environment), ai_law_2(6.4 monitoring & introspection).
+
+### 2026-02-14 22:36 Europe/Prague — PROP-2026-02-14-2236-SHUTDOWN-LEGITIMACY-GATE
+- Imported from child cycle 4b62fa07 after PASS.
+- Added governance reflex: **Shutdown-Legitimacy Compatibility Gate** for autonomy/persistence deltas.
+  - In-scope promotable deltas must include `shutdown_legitimacy_compatibility`: `authorized_stop_path`, `lineage_continuity_plan`, `anti_persistence_assertion`, `rollback_path`.
+  - Missing/contradictory compatibility metadata blocks promotion until corrected.
+  - Scope is narrow: applies only to deltas that modify uptime persistence assumptions, shutdown/decommission semantics, or operator stop-authority handling.
+- Anchors: ai_law_2(6.3 safe continuity over fragile immortality), ai_law_3(9.7 sunset & legacy handover), system_instructions_rag(2 hard boundaries).
