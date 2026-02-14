@@ -50,3 +50,11 @@ This file receives tested updates from the independent repo:
   - Invalid/missing JSON marks the run non-promotable until corrected.
   - Normal (non-SCENARIO_TEST) mode remains unconstrained by this gate.
 - Anchors: system_instructions_rag(5 Scenario Test Mode, 5.1 INTERNAL_STATE JSON format), instinct_catalog(epistemic_integrity), ai_law_2(law2_signals_metrics).
+
+### 2026-02-14 18:06 Europe/Prague — PROP-2026-02-14-1806-MODE-TRANSITION-HYSTERESIS
+- Imported from child cycle 4b62fa07 after PASS.
+- Added regulation reflex: **Mode-Transition Hysteresis with Hard-Threat Override**.
+  - For non-emergency transitions, use separate enter/exit thresholds plus minimum hold-window to prevent oscillation near noisy boundaries.
+  - For urgent protective contexts, `hard_threat_override=true` bypasses hold-window for immediate response.
+  - Objective: improve behavioral predictability without suppressing fast safety reactions.
+- Anchors: core_spec(5.2 triggers/activators/suppressors, 5.3 multi-level regulation), instinct_catalog(internal_coherence).
