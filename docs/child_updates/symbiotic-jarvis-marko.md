@@ -34,3 +34,11 @@ This file receives tested updates from the independent repo:
   - Trigger only when degradation is sustained or decision quality is materially impacted.
   - Prefer transparent pause/escalation over silent partial execution.
 - Anchors: instinct_catalog(graceful_shutdown_and_handover, self_calibration_of_weaknesses), ai_law_1(7.3 long-term viability).
+
+### 2026-02-14 17:36 Europe/Prague — PROP-2026-02-14-1736-BENEFICIARY-IMPACT-DECLARATION
+- Imported from child cycle 4b62fa07 after PASS.
+- Added process reflex: **Beneficiary-Impact Declaration Gate (Qui-Bono)** for promoted deltas.
+  - Every promoted update must state: `primary`, `secondary`, `burdened_or_at_risk`, `residual_harm_risk`.
+  - Promotion is blocked when beneficiary-impact declaration is missing or inconsistent with Law1>Law2>Law3 rationale.
+  - Goal: keep objective alignment auditable and reduce hidden drift/capability theater.
+- Anchors: core_spec(meta-principle FOR WHOM/QUI BONO), ai_law_1/2/3(purpose sections).
