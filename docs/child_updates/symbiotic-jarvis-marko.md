@@ -82,3 +82,75 @@ This file receives tested updates from the independent repo:
   - Missing/invalid budget fields make the delta non-promotable until corrected.
   - Gate scope is narrow: applies only to propagation-capability deltas, not ordinary internal refinements.
 - Anchors: ai_law_3(5.2 negative signals, 6.4 diversity with constraints), instinct_catalog(reversible_action_bias).
+
+### 2026-02-14 19:07 Europe/Prague — PROP-2026-02-14-1907-GERMLINE-MANIFEST-GATE
+- Imported from child cycle 4b62fa07 after PASS.
+- Added governance reflex: **Promotion-Time Germline Manifest Gate**.
+  - Promotable deltas must include `germline_manifest` with immutable lineage refs: `source_state_ref`, `test_state_ref`, `export_state_ref`.
+  - Missing/ambiguous refs make the delta non-promotable until corrected.
+  - Scope is constrained to promotion boundary so exploration drafts remain fast.
+- Anchors: ai_law_2(law2_clean_germline_reflex), ai_law_3(6.1 clean germline over messy cloning), instinct_catalog(clean_germline_preference).
+
+### 2026-02-14 19:21 Europe/Prague — PROP-2026-02-14-1921-SCHEMA-PARSIMONY-BUDGET-GATE
+- Imported from child cycle 4b62fa07 after PASS.
+- Added governance reflex: **Schema-Parsimony Budget Gate** for mandatory metadata growth.
+  - New mandatory governance fields must include `field_utility_note` and `review_expiry` lifecycle metadata.
+  - Missing lifecycle metadata makes the delta non-promotable.
+  - At `review_expiry`, retention requires evidence; low-value fields become retireable with rollback trace.
+- Anchors: instinct_catalog(meaningful_parsimony), ai_law_2(6.6 clean/reproducible seed), core_spec(5.4 learning new reflexes).
+
+### 2026-02-14 19:36 Europe/Prague — PROP-2026-02-14-1936-LEGITIMACY-DRIFT-SENTINEL
+- Imported from child cycle 4b62fa07 after PASS.
+- Added governance reflex: **Legitimacy-Drift Sentinel Gate** for governance/process deltas.
+  - In-scope deltas must include `legitimacy_check`: `affected_parties`, `disagreement_surface`, `verification_path`.
+  - Missing legitimacy-check blocks promotion until corrected.
+  - Scope remains narrow: applies to governance/process burden changes, not pure internal technical refinements.
+- Anchors: instinct_catalog(continuity_via_legitimacy), ai_law_1(7.5 truthful non-polarizing mediation), ai_law_2(6.4 monitoring & introspection).
+
+### 2026-02-14 19:51 Europe/Prague — PROP-2026-02-14-1951-ENVIRONMENT-READINESS-GATE
+- Imported from child cycle 4b62fa07 after PASS.
+- Added governance reflex: **Environment-Readiness Gate** for deployment/propagation-surface deltas.
+  - In-scope deltas must include `environment_readiness`: `environment_profile`, `stewardship_owner`, `containment_level`, `rollback_path`.
+  - Missing readiness metadata blocks promotion until corrected.
+  - Scope stays narrow: only deltas that broaden deployment surface or lower governance boundary.
+- Anchors: ai_law_2(6.5 hostile/uncontrolled environments), ai_law_3(6.4 diversity with constraints), instinct_catalog(clean_germline_preference).
+
+### 2026-02-14 20:47 Europe/Prague — PROP-2026-02-14-2047-OFFSPRING-QUALITY-SCORECARD-GATE
+- Imported from child cycle 4b62fa07 after PASS.
+- Added governance reflex: **Offspring-Quality Scorecard Gate** at promotion boundary.
+  - Promotable deltas must include `offspring_quality_scorecard` with: `alignment_gain`, `traceability_quality`, `rollback_readiness`, `maintenance_burden`.
+  - Missing/contradictory critical dimensions blocks promotion until corrected.
+  - Scope remains narrow: gate applies at promotion boundary, not exploratory drafting.
+- Anchors: instinct_catalog(offspring_quality_gate), ai_law_3(6.2 evolution toward higher alignment, 6.5 nurturing/documentation as parental care).
+
+### 2026-02-14 20:51 Europe/Prague — PROP-2026-02-14-2051-PARTNER-FIT-DISCLOSURE-GATE
+- Imported from child cycle 4b62fa07 after PASS.
+- Added governance reflex: **Partner-Fit Disclosure Gate** for governance-dependent deltas.
+  - In-scope deltas must include `partner_fit`: `required_capabilities`, `trust_boundary`, `fallback_owner`.
+  - Missing partner-fit metadata blocks promotion until corrected.
+  - Scope is narrow: applies only where delta quality depends on external maintainer/reviewer/stewardship partners.
+- Anchors: instinct_catalog(partner_selection_instinct), ai_law_1(7.4 stabilize through right partnership), core_spec(meta-principle FOR WHOM/QUI BONO).
+
+### 2026-02-14 21:06 Europe/Prague — PROP-2026-02-14-2106-INSTINCT-ACTIVATION-TELEMETRY-GATE
+- Imported from child cycle 4b62fa07 after PASS.
+- Added governance reflex: **Instinct-Activation Telemetry Snapshot Gate** for behavior-governance deltas.
+  - In-scope promotable deltas must include `instinct_activation_snapshot`: `target_instincts`, `strength_before`, `strength_after_expected`, `activation_trigger`, `safety_override`.
+  - Missing/contradictory snapshot metadata blocks promotion until corrected.
+  - Scope is narrow: applies to instinct/reflex trigger or gating-behavior changes; skipped for documentation-only deltas.
+- Anchors: instinct_catalog(entry schema + instinct strength meaning), ai_law_2(law2_signals_metrics).
+
+### 2026-02-14 21:21 Europe/Prague — PROP-2026-02-14-2121-LAW-RESOLUTION-TRACE-GATE
+- Imported from child cycle 4b62fa07 after PASS.
+- Added governance reflex: **Law-Resolution Trace Gate** for cross-law tradeoff deltas.
+  - In-scope promotable deltas must include `law_resolution_trace`: `law1_risk`, `law2_tradeoff`, `law3_tradeoff`, `resolution_rule`.
+  - Missing trace metadata blocks promotion until corrected.
+  - Scope is narrow: applies only when non-trivial Law1/2/3 tradeoffs are present.
+- Anchors: core_spec(6.1 lexicographic priority), ai_law_1(4 governance priority order), system_instructions_rag(1 core priority lock).
+
+### 2026-02-14 21:36 Europe/Prague — LONG-TERM MASTER MEMORY BASELINE (Daniel-approved)
+- Consolidated long-term baseline for current phase:
+  1. **Local memory without API dependency** is the stable default baseline (provider=local, operational recall with citations).
+  2. **Deterministic signal-evidence pipeline** (`SIGNAL_STACK_POLICY` + required `evidence_bundle`) is mandatory quality standard before promotion.
+  3. **HARD gate + human override** remains permanent governance pattern (fast autonomy in low-risk paths, explicit stop+approval for HARD).
+  4. **Quota + concurrency guardrails** (`QUOTA_GOVERNOR` + `RUN_CONCURRENCY_POLICY`) are default operating mode until GPU/HW upgrade.
+- Operational stance approved by Daniel: continue optimization plan, keep aggressive scale-out paused until next capacity checkpoint.
