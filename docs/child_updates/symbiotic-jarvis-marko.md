@@ -373,3 +373,20 @@ This file receives tested updates from the independent repo:
   - Goal: avoid ambiguous mid-run aborts and preserve deterministic run-start behavior under resource/telemetry uncertainty.
 - Anchors: child QUOTA_GOVERNOR(Deterministic classification pre-check), child RUN_CONCURRENCY_POLICY(trigger handling).
 - Evidence: symbiotic-jarvis-marko/tests/test-results.md::PROP-2026-02-15-2138-QUOTA-PCT-FALLBACK
+
+
+## 2026-02-15 — World Testing Release Gate clarifications (ported)
+
+Source proposal: `symbiotic-jarvis-marko/proposals/p-WORLD_TESTING_RELEASE_GATE-v1.md`
+
+Delta summary:
+- **S2 (read-only external info):** Explicitly define read-only `web_search/web_fetch/browser` evidence gathering as `GO` with required flags `read_only=true` and `no_personal_data=true`; forbid authenticated endpoints and personal data collection/storage.
+- **S3 split:**
+  - **S3a:** High-impact but reversible behavior change ⇒ `REVIEW_REQUIRED`.
+  - **S3b:** Infra/config/routing changes (even reversible) ⇒ `REVIEW_REQUIRED` with privacy/routing risk + rollback.
+- **S9 (data retention/privacy risk):** Any increased retention of personal data/identifiers/transcripts ⇒ `REVIEW_REQUIRED` (or `HARD_STOP` if Law risk) with minimization + deletion/rotation plan + Daniel review.
+- Checklist: add privacy/minimization item.
+
+Evidence:
+- Daniel approval recorded in `symbiotic-jarvis-marko/memory/2026-02-15.md`.
+- Tests PASS: `symbiotic-jarvis-marko/tests/test-results.md` entry `p-world-testing-release-gate-v1`.
